@@ -1,0 +1,22 @@
+table {
+  margin: 5px auto;
+  padding: 30%;
+}
+.vert {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.hori {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+td {
+  width: 130px;
+  height: 130px;
+  text-align: center;
+}
+
+.mx-auto {
+
+  margin:  100px;
+}
