@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Quote Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pageanimation.css">
+</head>
+
+<body onload="retriveInfo()">
+  <div class="preloader">
+    <div class="counter">0</div>
+  </div>
+
+  <div class="header">
+    <h1>Products for Sale based on Pavate</h1>
+    <img src="https://image.flaticon.com/icons/svg/2898/2898378.svg" style="width:70px" alt="">
+  </div>
+  <div class="grid-container">
+    <div class="grid-item">
+      <label for="fname">Customer Info: </label>
+    </div>
+    <div class="grid-item">
+      <p id="fname"></p>
+      <p id="email"></p>
+    </div>
+    <div class="grid-item">Product Selected:</div>
+    <div class="grid-item"><p id="products"></p></div>
+
+    <div class="grid-item">Product Price</div>
+    <div class="grid-item"><p id="price"></p></div>
+
+    <div class="grid-item">Number of Products:</div>
+    <div class="grid-item"><p id="order"></p></div>
+
+    <div class="grid-item">Total Amount:</div>
+    <div class="grid-item"><p id="totalSum"></p></div>
+
+    <form class="" action="../index.html" method="post">
+        <div class="grid-item"><button type="submit" onclick="saveInfo()"  class="button button5"><img src="https://image.flaticon.com/icons/svg/2879/2879564.svg" style="width:70px" >Go Back</button></div>
+    </form>
+
+  </div>
+
+
+
+
+  <div class="bottom-container">
+    <p>Vinayak Ashok Pavate/991548217/Trafalgar<img src="../images/vin.jpg" alt="" style="width:40px"></p>
+  </div>
+<script src="../js/index.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+  function counter(){
+    var count = setInterval(function(){
+      var c = parseInt($('.counter').text());
+      $('.counter').text((++c).toString());
+      if(c == 100){
+        clearInterval(count);
+        $('.counter').addClass('hide')
+        $('.preloader').addClass('active')
+      }
+
+    },10)
+  }
+  counter()
+</script>
+</body>
+
+</html>
